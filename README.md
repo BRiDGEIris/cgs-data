@@ -32,6 +32,28 @@ To make use of this package from another package (this is typically done when an
 import cgsdata
 ```
 
+## Contribute
+To contribute to the project, get a clone on your machine
+```{bash}
+git clone https://github.com/BRiDGEIris/cgs-data.git
+```
+Install git flow. This is not mandatory if you only change the master, but is very useful for a better branch management. You can find more info [here](http://danielkummer.github.io/git-flow-cheatsheet/).
+```{bash}
+git flow init
+```
+
+Make sure that you develop on the develop branch
+```{bash}
+git branch
+```
+A star should appear in front of the current branch.
+
+Then, from the package root directory, create a new release with
+```{bash}
+./update_version.sh 0.1.0
+```
+
+
 
 ## <a name="dataStructure">Generation of data structure in CGS</a> 
 The main goal of this package is to be usable for any type of data schemas. If you are not happy with the data structures proposed, you just need to make your own.
