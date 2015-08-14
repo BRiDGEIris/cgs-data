@@ -21,8 +21,7 @@ def read(*parts):
     
 def find_version_release(*file_paths):
     version_file = read(*file_paths)
-    version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]",
-    version_file, re.M)
+    version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", version_file, re.M)
     if version_match:
         release = version_match.group(1)
         version = re.search(r"^([0-9]*\.[0-9])*\.[0-9]*$", release, re.M).group(1)
@@ -47,7 +46,7 @@ setup(
     package_data={'cgsdata': ['data/*.yml']},
     include_package_data=True,
     #dependency_links = ['https://github.com/perenecabuto/json_schema_generator/tarball/master']
-    install_require = ['avro','PyVCF']
+    install_require = ['avro','PyVCF'],
     #tests_require=['pytest'],
     #test_suite='tests',
     tests_require=['nose2'],
