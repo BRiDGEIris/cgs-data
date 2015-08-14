@@ -14,7 +14,24 @@ Genomics/Exomics data are stored in HBase (accessible via Hive Metastore) and in
 
 To generate the tables one needs the corresponding rights to do so. 
 
-For the moment, only variant information is meant to be stored in HBase and AVRO files (see [here](http://avro.apache.org/docs/1.3.0/) for more details about the AVRO format).  
+For the moment, only variant information is meant to be stored in HBase and AVRO files (see [here](http://avro.apache.org/docs/1.3.0/) for more details about the AVRO format).
+
+
+## Installation
+One can install *cgs-data* with the following command: 
+```{bash}
+pip install git+https://github.com/BRiDGEIris/cgs-data.git#egg=cgsdata
+```
+To upgrade an existing package
+```{bash}
+pip install --upgrade git+https://github.com/BRiDGEIris/cgs-data.git#egg=cgsdata
+```
+
+To make use of this package from another package (this is typically done when an application in cgs-apps needs to be aware of the data structure), first install it on your system and then import it in your application as you would do with any other python package
+```{python}
+import cgsdata
+```
+
 
 ## <a name="dataStructure">Generation of data structure in CGS</a> 
 The main goal of this package is to be usable for any type of data schemas. If you are not happy with the data structures proposed, you just need to make your own.
