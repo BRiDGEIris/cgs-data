@@ -50,8 +50,9 @@ A star should appear in front of the current branch.
 
 Then, from the package root directory, create a new release with
 ```{bash}
-./update_version.sh 0.1.0
+sudo ./update_version.sh 0.1.2
 ```
+Replace `0.1.2` by the actual version.
 
 
 
