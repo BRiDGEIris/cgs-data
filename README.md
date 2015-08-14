@@ -52,8 +52,9 @@ Then, from the package root directory, create a new release with
 ```{bash}
 sudo ./update_version.sh 0.1.2
 ```
-Replace `0.1.2` by the actual version.
+Replace `0.1.2` by the actual version. The `update_version.sh` script actually starts a release branch, create the docs, commit the docs changes and finish the release branch. Finishing the release branch generates a tag in the master branch. 
 
+A `Makefile` is also available for building a python virtual environment (`sudo make build`), generating docs (`sudo make docs`) or testing the package (`sudo make tests`). 
 
 
 ## <a name="dataStructure">Generation of data structure in CGS</a> 
