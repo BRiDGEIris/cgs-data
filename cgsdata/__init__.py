@@ -1,2 +1,2 @@
 __all__ = ['CGSdatastructure']
-__version__ = ''
+__version__ = '0.1'
